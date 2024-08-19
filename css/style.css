@@ -1,0 +1,395 @@
+body {
+    background-color: black !important;
+    color: white !important;
+    font-family: Arial, sans-serif;
+  }
+  
+a {
+    text-decoration: none !important;
+  }
+
+
+/* Smooth hover effect for the navigation links */
+.navbar-nav .nav-item .nav-link {
+  transition: color 0.3s;
+  position: relative; 
+  background: fixed;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #FF5733; /* Change this color as per your preference */
+}
+
+/* Add a line under the navigation link on hover */
+.navbar-nav .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the height of the line as needed */
+  bottom: 0;
+  left: 0;
+  background-color: #FF5733; /* Line color */
+  transform: scaleX(0); /* Initially, the line has zero width */
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+  transform: scaleX(1); /* Expand the line to full width on hover */
+}
+.logo{
+  width: 100px;
+}
+.hero-header {
+  height: auto;
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+.order-btn {
+  border: 3px solid #3498db; /* Set the initial border color */
+  background-color: transparent; /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px; /* Add rounded corners */
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s; /* Add a smooth transition */
+}
+
+.order-btn:hover {
+  border-color: green; /* Change the border color on hover */
+  color: #3498db;
+}
+
+
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+
+#header-img{
+  animation: react infinite 25s linear;}
+
+  
+@keyframes react {
+  from {
+   transform: rotate(0deg);
+  }    
+  to{
+      transform:rotate(360deg);
+  }
+  }
+/* Style the custom buttons */
+.btn-group-custom button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.btn-group-custom button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style the line */
+.line {
+  width: 100%;
+  border-top: 1px solid white;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+/* About */
+#about {
+
+  padding: 50px 0;
+}
+
+#about h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#about p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+#about-img {
+  max-width: 100%;
+  border: 3px solid #ccc;
+  transition: transform 0.2s;
+}
+
+#about-img:hover {
+  transform: scale(1.1);
+}
+
+/* Menu */
+.menu-list {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 100px !important;
+  max-height: 80px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+/* Gallery */
+.image {
+  position: relative;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+/* Style the overlay for image title */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+.image:hover .overlay {
+  display: block;
+}
+
+
+
+
+  .popular-items {
+      text-align: center;
+  }
+
+  .popular-items h3 {
+      font-size: 1.2rem;
+  }
+
+  .menu-item img {
+      max-width: 80px;
+      margin-bottom: 5px;
+  }
+
+  .menu-item h3 {
+      font-size: 1.2rem;
+  }
+
+  .item-description {
+      font-size: 0.8rem;
+  }
+
+  .item-price {
+      font-size: 1rem;
+  }
+
+
+/* Team section */
+
+
+.team-section {
+  padding: 60px 0;
+ 
+}
+
+.team-member {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15%;
+}
+
+.member-details {
+  border-radius: 10px;
+
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: none;
+}
+
+.team-member:hover .member-details {
+  display: block;
+}
+
+.member-details h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.member-details p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.half-line{
+background:linear-gradient(45deg, #f4cf1485 , #63530333), url('https://png.pngtree.com/png-vector/20230321/ourmid/pngtree-modern-kitchen-food-boxed-cheese-lunch-pizza-png-image_6651523.png');
+  background-repeat: repeat; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-weight: bolder;
+  font-size: 2.8rem;
+  background-size: cover;
+  font-family: 'Steelfish Rg', 'helvetica neue', 
+  helvetica, arial, sans-serif; 
+}
+.half-line::before{
+  width:4rem;
+content: '';
+height: 3px;
+background-color: #fff;
+display: inline-block;
+transform: translateY(-10px);
+margin-right: 1rem;
+background-color: #F4CE14;
+}
+.half-line::after{
+width:4rem;
+content: '';
+height: 3px;
+background-color: #fff;
+display: inline-block;
+transform: translateY(-10px);
+margin-left: 1rem;
+background-color: #F4CE14;
+
+}
+
+
+
+.cart-icon{
+  font-size: 24px;
+  padding: 2px;
+  transition: font-size 0.3s;
+}
+
+
+
+
+
+/* Adjusting styles for smaller screens */
+@media (max-width: 768px) {
+  #about h2 {
+      font-size: 20px;
+  }
+
+  #about p {
+      font-size: 14px;
+  }
+  .menu-heading{
+    font-size: 23px;
+  }
+  .half-line::before{
+    width:2rem;
+  background-color: #F4CE14;
+  }
+  .half-line::after{
+  width:2rem;
+  height: 2px;
+  }
+
+  .hero-header{
+    margin-top: 0% !important;
+  }
+  .nva-bar{
+    margin-bottom: 0%;
+  }
+.half-line{
+
+  -webkit-text-fill-color: rgb(250, 177, 81); 
+}
+}
+
+@media (min-width: 992px) {
+  .hero-header {
+      height: auto;
+      
+  }
+  .slideInLeft{
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+  .slideInLeft{
+    margin-top: 0px;
+  }
+}
+
+.popup{
+  display: none;
+  background-color: #fff;
+  height: 5rem;
+  width: 25rem;
+  padding: 2rem;
+color: #3498db;
+border-radius: 3px;
+text-align: center;
+position: absolute;
+z-index: 99;
+bottom: 1rem;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.popup h1{
+  font-size: 1rem;
+}
+

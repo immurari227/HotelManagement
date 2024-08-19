@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart Example</title>
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+
+    <div id="product-list">
+        <h2>Product List</h2>
+        <ul>
+            <li>
+                Product 1 - <button onclick="addToCart('Product 1')">Add to Cart</button>
+            </li>
+            <li>
+                Product 2 - <button onclick="addToCart('Product 2')">Add to Cart</button>
+            </li>
+            <li>
+                Product 3 - <button onclick="addToCart('Product 3')">Add to Cart</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </ul>
+    </div>
+
+    <script>
+        const cart = {};
+
+        function addToCart(product) {
+            if (cart[product]) {
+                // If the product is already in the cart, increase the quantity
+                cart[product]++;
+            } else {
+                // If the product is not in the cart, add it with a quantity of 1
+                cart[product] = 1;
+            }
+
+            // Update the cart display
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+
+            for (const product in cart) {
+                const quantity = cart[product];
+                const cartItem = document.createElement("li");
+                cartItem.textContent = `${product} - Quantity: ${quantity}`;
+                cartItems.appendChild(cartItem);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="cart-items">
+        <!-- Cart items will be displayed here -->
+    </div>
+
+    <script>
+        // Function to display cart items
+        function displayCart() {
+            // Retrieve the cart data from localStorage
+            let cart = JSON.parse(localStorage.getItem("cart"));
+
+            if (!cart || cart.length === 0) {
+                document.getElementById("cart-items").innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                let cartHTML = "<ul>";
+                cart.forEach(function (item) {
+                    cartHTML += `<li>${item.name} - ₹${item.price.toFixed(2)}</li>`;
+                });
+                cartHTML += "</ul>";
+                document.getElementById("cart-items").innerHTML = cartHTML;
+            }
+        }
+
+        // Call the displayCart function when the page loads
+        displayCart();
+    </script>
+</body>
+</html>
